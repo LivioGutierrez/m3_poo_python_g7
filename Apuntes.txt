@@ -1,0 +1,247 @@
+-----Apuntes y Observaciones de Python-----
+
+-----Importante-----
+Siempre pero SIEMPRE esperar la opinion del cliente, no se avanza sin su aprobacion
+()->Tuplas
+{}->Diccionarios
+[]->Listas
+--------------------
+
+-----Tipos de dato----- 
+    int: Numerico
+    string: Texto
+    float: Numerico con decimales
+    booleans: True o False
+    None: "nose xD"
+-----Fin de Tipos de dato-----
+
+-----Limitantes-----
+    Pyton no permite sumar LETRAS Y NUMEROS
+    ERROR -> TypeError: can only concatenate str (not "int") to str
+--------------------
+
+----------print----------
+    Nos permite hacer operaciones matematicas basicas.
+
+    La sintaxis basica es -> print()
+
+    Hay 5 formas de imprimir un texto/variable estas serian:
+
+        -----print basico-----
+        ° print("Texto") o print(variable)
+        ----------------------
+
+        -----print interpolacion-----
+        ° print(f "textp {variable}")
+        -----------------------------
+
+        -----print .format-----
+        ° print("texto {} texot {}".format(variable,variable))
+        -----------------------
+
+        -----print con %s para string y %d para numeros-----
+        ° print("texto %s texto %d" % (variable, variable))
+        ----------------------------------------------------
+
+        -----print con cadena-----
+        ° print(varible.title())
+            DATO: title hace que la primera letra de cada palabra lo pone con mayuscula
+                  aun que este con mayusculas entre las palabras  
+    --------------------------
+----------Fin de print----------
+
+----------Operaciones matematicas----------
+    si lleva unos () se ejecutan antes que una multiplicacion
+
+    -----Divisiones-----
+        DATO: la division siempre dara un deciman, exepto si usamos //
+
+        En python no se puede vividir por 0
+        ERROR -> ZeroDivisionError: division by zero
+    -----Fin de Divisiones-----
+----------Fin de Operaciones matematicas----------
+
+-----Typos de funciones y metodos-----
+    Funcion type -> nos premite saber el tipo de dato
+
+    Funcion len -> nos permite saber cuantos caracteres hay en un string
+        DATO: si pones un numero da como resultado -> ERROR:TypeError: object of type 'int' has no len()
+
+    Metodo .count -> nos sirper para encontrar letras o palabras especificas
+    Metodo .upper -> convierte un string palabra completa en mayusculas
+    Metodo .lower -> convierte un string palabra completa en minuscula 
+    Metodo .title -> convierte la primera letra de cada palabra en mayuscula
+-----Fin de los Typos de funciones y metodos-----
+
+----------Input----------
+    su sintaxis es la siguiente
+        "variable = input("texto")"
+
+    sirve para poder interacutar con el usuario interactivamente.
+
+    el input siempre entregara un STRING para pasarlo a numero tenemos que usar la siguiente sintaxis
+        "variable = int(input("texto"))"
+        "variable = float(input("texto"))"
+----------Fin de Input----------
+
+----------Librerias----------
+    libreria math -> nos permite hacer operaciones matematicas mas avanzadas.
+
+    hay 3 formas de importarlas esta el:
+        "import math" -> importa toda la libreria
+        from math import pow, sqrt, ceil -> importa los justo y nesesario(recomendada)
+
+    tambien podemos instalarlas por consola con "pip" y el nombre de la libreia
+
+            metodo pow -> expone el numero
+            metodo sqrt -> es la raiz cuadrada    
+            metodo cel -> aproxima el numero al superior
+----------Fin de Librerias----------
+
+----------Ciclo While----------
+    El ciclo while sirve para poder repetir una y otra vez el segmento de codigo mientras se cumpla una condicion
+
+    Se puede es escrbir "True" despues de la palabra While puedes hacer un bluque por que si o si se cumple entonces luego
+    solamente pones la palabra "break" donde deseas que acabe el procedimiento por ejemplo asi es la sintaxis:
+
+    (Desafio 2 dia 6, imc.py)
+
+    while True:         
+        altura_cm = float(input("Ingrese la altura en centímetros: "))
+        if altura_cm == 0:#deveria ir un <=
+                print("El Valor no puede ser 0")
+        else:
+            break
+    
+    tambien puedes hacesce comparaciones como "!=" o tambien "<,> "
+----------Fin de Ciclo While----------
+
+----------Ciclo For----------
+    Basicamente es como el while en sierta forma pero mas potente, ya que se puede operaciones: fijate en la sintaxis.
+
+    (dia 8 cliclo_flor.py)
+
+    #aca empieza asi [0,1,2,3,4,5,6,7,8,9]
+    for i in range(10):#->el 10 no lo cuenta, no concidera el ultimo elemento que le damos
+        print(f"El valor de i es: {i}")
+
+    en el ejercicio de arriba hace un recorrido del 0 al 9 
+
+    es muy extenso lo que podemos hacer con el for
+----------Fin del Ciclo For----------
+
+----------Funciones----------
+    Sintaxis:
+        def nombre(vacio/argumento):
+            contenido del codigo
+
+    el argumento es simple, Basicamente es como que le pormetemos un dato a futuro por ejemplo:
+        def lista_super(elementos):
+            contenido del codigo
+
+    lista_super(azucar)
+
+    azucar vendria siendo el elemento que le prometimos anteriormente a la funcion
+
+    cuando ocupamos un * al lado izquierdo junto argumento nos entrega una lista. sin embargo con dos ** nos estrega un diccionario
+    un ejemplo de la sintaxis:
+
+        def nombre(*elementos):
+            contenido del codigo
+
+        def nombre(**elementos):
+        contenido del codigo
+
+    se ocupan para reutilizar codigo y que sea mas limpio 
+----------Fin de las Funciones----------
+
+----------Tuplas----------
+----------Fin de Tuplas----------
+
+----------Diccionarios----------
+    diccionarios: nos sirven para almacenar cantidades enormes de datos
+    sintaxis:
+        nombre{nombre = "alex"}
+
+    se vasan en clave, calor en ese orden
+
+    dentro de un diccionario nos podemos pillar con listas, otros diccionarios, todo tipo de datos
+
+    las claves son UNICAS
+----------Fin de Diccionarios----------
+
+----------Listas----------
+    Listas: nos sirven para almacenar datos
+    sintaxis:
+        nombre=['juan','pedro']
+    
+    funcuonan por indices, se rigen por orden, a comparacion del diccionario no se rige por orden,|
+----------Fin de Listas----------
+
+----------APUNTES DE PROGRAMACION ORIENTADA A OBJETOS----------
+    ----------Los 4 pilares de la programacion orientada a objetos son:----------
+
+        -abstracción:
+        -encapsulamiento:
+        -polimorfismo:
+        -herencia:
+    ----------Fin Los 4 pilares de la programacion orientada a objetos son:----------
+
+    ----------Apuntes de la clase 1 de POO----------
+        ● El molde que permite crear una pelota
+        es lo que se conoce como Clase.
+
+        ● Atributo (carecteristicas): características que
+        pertenecen al objeto.
+
+        ● Método (aciones): acciones que puede realizar
+        el objeto.
+
+        ----------Diferencias----------
+            Programacion Estructurada: funciones funciones
+            Programacion Poo: clases obejtos 
+        ----------Fin Diferencias----------
+
+       Que es una clase: nos permite crear un objeto, del objeto nace de un molde
+
+        ----------Tipo de clases----------
+        Publicas: Cualquiera puede acceder a ella 
+        No abstracctas: Implementan los metodos que definen
+        ----------Tipo de clases----------
+
+        todo es un objeto en Python
+        que es instancia de una clase: es detectar de que clase fue creada el objeto tambien es crear un objeto
+
+        ----------ATRIBUTOS----------
+            Contenedor de un valor o de un conjunto de valores,
+            definido dentro de una clase que adquiere un tipo de dato
+            según el valor que se le asigne.
+
+            Es decir, un atributo es análogo a una variable de Python,
+            pero que en este caso se define dentro de una clase, a
+            diferencia de una variable cualquiera de Python que no
+            necesita definirse dentro de una clase. Por lo tanto, para
+            acceder al atributo o modificar su valor, se debe hacer por
+            medio de la clase.
+
+            DIFERENCIA ENTRE ATRIBUTO Y VARIABLE: ATRIBUTO: SE DECLARA EN UNA CLASE.
+                                                  VARIABLE: SE DECLARAN EN CUALQUIER PARTE
+
+            ----------Tipos de atributos----------
+            Estáticos o de clase:
+            Pertenecen a la definición de la clase como
+            tal, por lo que es posible acceder a ellos o
+            asignarles un valor, directamente desde la
+            clase, sin necesidad de generar un objeto o
+            instancia.
+
+            No estáticos o de instancia:
+            No pertenecen a la definición de la clase
+            como tal, por lo que para acceder a ellos o
+            asignarles un valor se requiere primero
+            crear un objeto (o instancia) de la clase.
+            ----------Fin Tipos de atributos----------
+
+        ----------Fin ATRIBUTOS----------
+
+        

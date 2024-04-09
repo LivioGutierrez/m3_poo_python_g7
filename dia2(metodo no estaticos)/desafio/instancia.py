@@ -1,7 +1,7 @@
 from te import Te
 
-te_negro= Te
-te_verde= Te
+te_negro= Te()
+te_verde= Te()
 
 te1=type(te_negro)
 te2=type(te_verde)

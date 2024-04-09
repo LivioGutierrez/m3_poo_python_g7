@@ -7,7 +7,8 @@ class Medicamento():
     def validad_mayor_a_cero(numero: int):
         return numero > 0
     
-    #modifica la clase completa
+    
+    #los metodos estaticos no pueden modificar los atributos de por si solos
     @staticmethod
     def modificar_atibuto():
-        Medicamento.IVA= 0.19
+        Medicamento.IVA= 0.19 #modifica la clase completa

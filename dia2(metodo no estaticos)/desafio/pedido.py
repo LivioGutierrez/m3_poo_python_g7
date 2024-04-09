@@ -1,6 +1,6 @@
 from te import Te
 
-te= Te
+te= Te()
 
 clase_te= int(input("""
 Ingrese el Té que desea comprar

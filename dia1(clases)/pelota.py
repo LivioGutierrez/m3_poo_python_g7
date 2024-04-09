@@ -24,5 +24,5 @@ class Pelota():
     def rebotar(self):
         self.posicion= self.crear_rebote()
     
-    def nuevo_atributo(self):
+    def nuevo_atributo(self):# el parametro self es referiendose al instacion ejemplo "Hola yo"
         self.color= "blanco"

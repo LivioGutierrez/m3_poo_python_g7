@@ -244,4 +244,11 @@ Siempre pero SIEMPRE esperar la opinion del cliente, no se avanza sin su aprobac
 
         ----------Fin ATRIBUTOS----------
 
+        ----------METODO----------
+        Difirencia entre metodo y funcion: el metodo se hace dentro de una clase, la funcion no
+            ● El método no estático no altera los valores de los atributos de la clase Pelota.
+            ● El método estático sí afecta el atributo posiciones.
+
+
+
         

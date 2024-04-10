@@ -6,7 +6,6 @@ class Pizza():
     
     #Requerimiento 1
     #Atributos
-    valida= False
     tipo_masa= None
     vegetal1= None
     vegetal2= None
@@ -20,6 +19,18 @@ class Pizza():
     
     #Requerimiento 3 y 5-C
     def pedido_a_realizar(self):
+        #Menu
+        print("""
+                            Ingredientes:
+                    
+            Proteicos          Vegetal          Masa
+            ---------          -------          ----   
+            > Pollo            > Tomate        > Tradicional  
+            > Vacuno           > Aceitunas     > Delgada
+            > Carne            > Champiñones
+        """)
+        
+        #Asignandole los valores que ingrese el usuario a los atributos
         self.proteico= input("Ingrese proteicos > ")
         self.vegetal1= input("Ingrese vegetales > ")
         self.vegetal2= input("Ingrese vegetales > ")

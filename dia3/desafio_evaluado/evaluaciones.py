@@ -37,4 +37,5 @@ print(F"El Proteico es: {pizza.proteico}")
 #Requerimiento 5-E
 print("")
 print("Requerimiento 5-E")
-print(F"La pizza es: {'si' if pizza.valida else 'no'}")
+# print(F"La pizza es: {'si' if pizza.valida else 'no'}")
+print(Pizza.valida)

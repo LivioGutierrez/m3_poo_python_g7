@@ -36,12 +36,7 @@ while True:
             print(":::::Listado de productos:::::")
             
         elif opcion == "3":
-            while True:
-                nombre_producto = input("Ingrese el nombre del producto a vender: ")
-                if not tienda.verificar_producto(nombre_producto):
-                    print("Producto no encontrado")
-                    continue
-                break
+            nombre_producto = input("Ingrese el nombre del producto a vender: ")
             cantidad = int(input("Ingrese la cantidad a vender: "))
             tienda.realizar_venta(nombre_producto, cantidad)
         elif opcion == "4":

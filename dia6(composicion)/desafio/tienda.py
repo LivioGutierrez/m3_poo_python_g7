@@ -21,8 +21,9 @@ class Tienda():
     
     def ralizar_ventas(self, nombre_producto, cantidad):
         for produc in self._productos:
-            if produc == nombre_producto and cantidad > produc.stock:
+            if produc == nombre_producto and produc.stock >= cantidad:
                 produc.stock -= cantidad
+                
                 print(f"Venta Completada, Usted lleva una cantidad de {cantidad} del producto: {nombre_producto}")
             else:
                 print("Venta no realizada, falta de Stock")
@@ -37,11 +38,14 @@ class Restaurante(Tienda):
         for produc in self._productos:
             print(f"Nombre: {produc.nombre}, Precio: {produc.valor}")
     
+    def realizar_venta(self, nombre_producto, cantidad):
+        super().ralizar_ventas(nombre_producto, cantidad)
+    
 class Supermercado(Tienda):
-    def __init__(self) -> None:
+    def __init__(self):
         pass
 
 class Farmacia(Tienda):
-    def __init__(self) -> None:
+    def __init__(self):
         pass
 

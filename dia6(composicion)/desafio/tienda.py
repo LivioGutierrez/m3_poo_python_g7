@@ -47,9 +47,9 @@ class Supermercado(Tienda):
         
     def listar_producto(self):
         for produc in self._productos:
-            if produc <= 10:
-                print("¡ALERTA! queda poco stock")
-                print(f"Nombre: {produc.nombre}, Precio: {produc.valor}")
+            if produc.stock <= 10:
+                print(f"¡ALERTA! queda poco stock de este producto: {produc.nombre}")
+                
 
 class Farmacia(Tienda):
     def __init__(self):

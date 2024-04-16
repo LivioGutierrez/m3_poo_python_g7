@@ -2,10 +2,6 @@ from tienda import Restaurante,Supermercado,Farmacia
 from producto import Producto
 
 
-
-
-nombre_de_tienda= input("Ingrese el nombre de la tienda: ")
-delivery= float(input("Ingrese el costo del delivery: "))
 print(""" 
 1: Restaurante
 2: Supermercado
@@ -13,6 +9,9 @@ print("""
 """)
 
 op=int(input("Ingrese el restaurante a crear: "))
+
+nombre_de_tienda= input("Ingrese el nombre de la tienda: ")
+delivery= float(input("Ingrese el costo del delivery: "))
 
 if op== 1:
     tienda= Restaurante(nombre_de_tienda, delivery)
@@ -45,7 +44,7 @@ while True:
             print("")
             print(tienda.listar_producto())
             print("")
-            print(":::::Listado de productos:::::")
+            print(":::::::::::::::::::::::::::::")
             
         elif opcion == "3":
             nombre_producto = input("Ingrese el nombre del producto a vender: ")

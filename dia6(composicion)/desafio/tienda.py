@@ -52,6 +52,21 @@ class Supermercado(Tienda):
                 
 
 class Farmacia(Tienda):
-    def __init__(self):
-        pass
+    def ingresar_producto(self, producto):
+        super().ingresar_producto(producto)
+    
+    def listar_producto(self):
+        for produc in self._productos:
+            if produc.stock <= 10:
+                print(f"¡ALERTA! queda poco stock de este producto: {produc.nombre}")
 
+    def realizar_venta(self, nombre_producto, cantidad):
+        for produc in self._productos:
+            if produc.valor >= 15000 and produc.stock >= cantidad:
+                print("")
+                print(f"Envío gratis al solicitar este producto: {produc.nombre}")
+                print("")
+            else:
+                print("")
+                print("No tenemos esa cantidad en el Stock")
+                print("")

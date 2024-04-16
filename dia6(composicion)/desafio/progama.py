@@ -36,6 +36,7 @@ while True:
             nombre_producto = input("Ingrese el nombre del producto: ")
             precio_producto = float(input("Ingrese el precio del producto: "))
             stock_producto = int(input("Ingrese el stock del producto: "))
+            print("")
             producto = Producto(nombre_producto, precio_producto, stock_producto)
             tienda.ingresar_producto(producto)
             

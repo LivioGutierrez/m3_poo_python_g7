@@ -1,17 +1,29 @@
-from tienda import Restaurante
+from tienda import Restaurante,Supermercado,Farmacia
 from producto import Producto
+
+
+
 
 nombre_de_tienda= input("Ingrese el nombre de la tienda: ")
 delivery= float(input("Ingrese el costo del delivery: "))
+print(""" 
+1: Restaurante
+2: Supermercado
+3: Farmacia
+""")
 
-op=1
+op=int(input("Ingrese el restaurante a crear: "))
 
-if op == 1:
-    tienda=Restaurante(nombre_de_tienda, delivery)
+if op== 1:
+    tienda= Restaurante(nombre_de_tienda, delivery)
+elif op== 2:
+    tienda= Supermercado(nombre_de_tienda, delivery)
+elif op== 3:
+    tienda= Farmacia(nombre_de_tienda, delivery)
 
 print("")
 while True:
-        print("\nSeleccione una acción:")
+        print("Seleccione una acción:")
         print(""" 
 1: Agregar producto
 2: Listar productos

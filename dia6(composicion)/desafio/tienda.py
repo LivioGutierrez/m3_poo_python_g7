@@ -42,8 +42,14 @@ class Restaurante(Tienda):
         super().ralizar_ventas(nombre_producto, cantidad)
     
 class Supermercado(Tienda):
-    def __init__(self):
-        pass
+    def ingresar_producto(self, producto):
+        super().ingresar_producto(producto)
+        
+    def listar_producto(self):
+        for produc in self._productos:
+            if produc <= 10:
+                print("¡ALERTA! queda poco stock")
+                print(f"Nombre: {produc.nombre}, Precio: {produc.valor}")
 
 class Farmacia(Tienda):
     def __init__(self):

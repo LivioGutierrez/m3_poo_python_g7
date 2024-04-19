@@ -1,0 +1,2 @@
+class Pelota():
+    pass

@@ -1,13 +1,3 @@
-""" 
-Integrantes:
--Najla Gtica
--Yanina Belmar
--Edinson Ahumada
--Pablo Hernández
--Manuel Ruiz
--Livio Gutierrez
-"""
-
 from error import DimensionError
 
 class Foto():

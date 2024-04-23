@@ -1,0 +1,2 @@
+[2024-04-22 12:40:50] ERROR: invalid literal for int() with base 10: 'ñ'
+[2024-04-22 12:41:05] ERROR: invalid literal for int() with base 10: '-'

@@ -12,6 +12,7 @@ class Padre():
     def cambiar_color(self, color:str):
         if color != "":
             self.color = color
+    
     #Sobre Escritura
     def __str__(self):
         return f"El color es {self.color}, y el tamanio {self.__tamanio}"

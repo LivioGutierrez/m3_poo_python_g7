@@ -2,10 +2,9 @@
 Clase abstracta
 Clase componente  de campaña
 """
-from subtipoinvalidoerror import SubTipoInvalidoError
 from abc import ABC, abstractmethod
 
-class Anuncio(SubTipoInvalidoError,ABC):
+class Anuncio(ABC):
     
     def __init__(self, url_archivo, url_clic, sub_tipo,ancho=1, alto=1):
         self.__ancho=ancho
@@ -66,6 +65,72 @@ class Anuncio(SubTipoInvalidoError,ABC):
     @url_clic.setter
     def url_clic(self):
         pass
+
+class Video(Anuncio):
+    FORMATO= "Video"
+    SUB_TIPOS= ("instream","outstream")
+    def __init__(self, ancho, alto, url_archivo, url_clic, sub_tipo, duracion=5):
+        
+        self.__ancho= 1
+        self.__alto= 1
+        self.__duracion= duracion
+        super().__init__(ancho, alto, url_archivo, url_clic, sub_tipo)
+
+    
+    def comprimir_anuncio():
+        return f"COMPRESIÓN DE VIDEO NO IMPLEMENTADA AÚN"
+    
+    def redimensionar_anuncio():
+        return f"RECORTE DE VIDEO NO IMPLEMENTADO AÚN"
+    
+    #GETTER Y SETTER DE ANCHO
+    @property
+    def ancho(self):
+        return self.__ancho
+    
+    #GETTER Y SETTER DE ALTO
+    @property
+    def alto(self):
+        return self.__alto
+    
+    #GETTER Y SETTER DE DURACION
+    @property
+    def duracion(self):
+        return self.__duracion
+    
+    @duracion.setter
+    def duracion(self, duracion):
+        if duracion > 0:
+            self.__duracion=duracion
+        return
+
+class Display(Anuncio):
+    FORMATO= "Display"
+    SUB_TIPOS= ("tradicional","native")
+    
+    def __init__(self, ancho, alto, url_archivo, url_clic, sub_tipo):
+        
+        super().__init__(ancho, alto, url_archivo, url_clic, sub_tipo)
+    
+    def comprimir_anuncio():
+        pass
+    
+    def redimensionar_anuncio():
+        pass
+
+class Social(Anuncio):
+    FORMATO= "Social"
+    SUB_TIPOS= ("facebook","linkedin")
+    def __init__(self, ancho, alto, url_archivo, url_clic, sub_tipo):
+        
+        super().__init__(ancho, alto, url_archivo, url_clic, sub_tipo)
+    
+    def comprimir_anuncio():
+        pass
+    
+    def redimensionar_anuncio():
+        pass
+
 
 if __name__ == "__main__":
     
